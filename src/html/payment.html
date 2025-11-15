@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <title>Payment - CupCraze</title>
+    <link rel="icon" href="../Assets/logo.png" type="image/x-icon" >
+    <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    <img src="../Assets/background.webp" alt="background" class="background-image">
+    <div class="container">
+        <div class="left">
+            <p>Order Summary</p>
+            <div class="details">
+            <div id="orderSummary"></div>
+            </div>
+            <div class="orderFooter">
+                <div class="Summary-subtotal">
+                    <p class="summary-left">Subtotal</p>
+                    <span id="subAmount" class="sub-amount"></span>
+                </div>
+                <div class="Summary-subtotal">
+                    <p class="summary-left2">Tax (10%)</p>
+                    <span id="taxAmount" class="tax-amount"></span>
+                </div>
+                <div class="Summary-subtotal2">
+                    <p class="summary-left3">Total</p>
+                    <p class="free-text">free shipping from 1st August onwards</p>
+                    <span id="totalsum" class="total-num">0.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="shipping-address">
+            <p>Shipping Address</p>
+            <form id="shipping-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Address" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group country">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" placeholder="Country" required>
+                    </div>
+                    <div class="form-group postcode">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" placeholder="Postcode" required>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="save-info" name="save-info" value="Submit">
+                    <label for="save-info">Save this information for next purchase</label>
+                </div>                
+            </form>
+        </div>
+        <div class="right">
+            <p>Payment Details</p>
+            <div class="credit-cards" style="text-align: center; width: 100%;">
+                <img height="40" src="https://shoplineimg.com/assets/footer/card_visa.png"/>
+                <img height="40" src="https://shoplineimg.com/assets/footer/card_master.png"/>
+                <img height="40" src="https://shoplineimg.com/assets/footer/card_unionpay.png"/>
+            </div>
+            <div class="card-details">
+                <form id="payment-form">
+                    <p>Card number</p>
+                    <div class="c-number" id="c-number">
+                        <input id="number" class="cc-number" style="margin-left: -12px;" placeholder="Card number" maxlength="19" required>
+                    </div>
+                    <div class="c-details">
+                        <div>
+                            <p>Expiry date</p>
+                            <div class="expiry-box" id="expiry-box">
+                            <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5">
+                            </div>
+                        </div>
+                        <div>
+                            <p style="margin-left: 10px;">CVV</p>
+                            <div class="cvv-box" id="cvv-box">
+                                <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <p>Email</p>
+                        <input type="email" placeholder="example@email.com" id="email" required>
+                    </div>
+                    <button id="pay-button" class="pay-button">
+                        <img src="../Assets/lock.png" alt="lock icon" class="lock-icon">Place Order
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="orderPopup" class="popup">
+        <div class="popup-content">
+            <img src="../Assets/success.png" alt="Success" class="success-icon">
+            <h1>Payment Successful!</h1>
+            <p>Your payment has been completed.</p>
+            <button id="finish-button" class="finish-button">Back to Home</button>
+    </div>
+    </div>
+    <script src="../javascript/card.js"></script>
+    <script src="../javascript/payment.js"></script>
+</body>
+</html>

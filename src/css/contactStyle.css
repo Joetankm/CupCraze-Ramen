@@ -1,0 +1,253 @@
+body {
+    background-color: #FFFDD0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #fffdd0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.form-container {
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.phone-no-container {
+    display: flex;
+}
+
+.phone-no-container select {
+    width: 32%;
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+    width: 780px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #593f43;
+}
+
+.back-home-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #757575;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-home-button:hover {
+    background-color: #535050;
+}
+
+footer {
+    background-color: #414141;
+    color: #daa520;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.footer-subscribe {
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+    color: #daa520;
+}
+
+.footer-subscribe form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-subscribe p {
+    color: #DAA520;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.mail-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: auto;
+}
+
+.footer-subscribe input {
+    padding: 8px 8px 8px 30px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-top: 0px;
+    color: #000;
+}
+
+.footer-subscribe button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: #daa520;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.footer-subscribe button:hover {
+    background-color: #5d4405;
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-column {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #daa520;
+}
+
+.footer-column a {
+    display: block;
+    color: #daa520;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column img {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#unionpay-icon-size {
+    height: 40px;
+    width: auto;
+    margin-top: 5px;
+}
+
+.footer-bottom-bar {
+    background-color: #414141;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #000;
+}
+
+.footer-bottom-bar p {
+    margin: 0;
+    color: #DAA520;
+}

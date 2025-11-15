@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - CupCraze</title>
+    <link rel="stylesheet" href="../css/homeStyle.css">
+    <link rel="stylesheet" href="../css/headerfooterStyle.css">
+    <link rel="stylesheet" href="../css/aboutStyle.css">
+    <link rel="icon" href="../Assets/logo.png" type="image/x-icon" >
+    <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon">
+    <script src="../javascript/footerScript.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="../Assets/logo.png" alt="Cup Noodles Logo">
+        </div>
+    </header>
+    <main>
+        <section class="faq-section">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <p>Welcome to CupCraze Ramen's FAQ page! Here you'll find answers to some of the most commonly asked questions about our products and services.</p>
+            
+            <h3>1. What types of ramen do you offer?</h3>
+            <p>We offer a wide variety of ramen from around the world, including both classic flavors and unique, hard-to-find options. Our selection includes instant ramen, premium noodles, and specialty ramen from different countries.</p>
+            
+            <h3>2. How can I place an order?</h3>
+            <p>Placing an order is easy! Simply browse our online store, add the items you want to your cart, and proceed to checkout. You can create an account for faster checkout in the future, but it's not required.</p>
+            
+            <h3>3. What payment methods do you accept?</h3>
+            <p>We accept various payment methods, including major credit cards, PayPal, and other secure payment options as indicated on our website during checkout.</p>
+            
+            <h3>4. How long will it take to receive my order?</h3>
+            <p>Delivery times vary depending on your location and the shipping method selected. We aim to process and ship orders promptly, and you will receive a tracking number once your order has shipped. Please refer to our Shipping and Delivery policy for more details.</p>
+            
+            <h3>5. Can I return or exchange an item?</h3>
+            <p>Yes, we want you to be satisfied with your purchase. If you are not completely satisfied, please refer to our Returns and Refunds policy for information on how to return items and request a refund or exchange. Please note that certain items may be non-returnable or subject to specific return conditions.</p>
+            
+            <h3>6. Do you ship internationally?</h3>
+            <p>Yes, we offer international shipping to many countries. Shipping rates and delivery times may vary based on the destination. Any additional charges for customs clearance must be borne by the recipient.</p>
+            
+            <h3>7. How can I contact customer service?</h3>
+            <p>You can contact our customer service team by writing your message on <a href="contact.html">"Contact Us"</a>. We aim to respond to all inquiries within 24-48 hours.</p>
+            
+            <h3>8. How do I track my order?</h3>
+            <p>Once your order has shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment through the carrier's website.</p>
+            
+            <h3>9. Do you offer gift cards?</h3>
+            <p>Yes, we offer gift cards in various denominations. Gift cards can be purchased through our website and are a great gift option for ramen enthusiasts.</p>
+            
+            <h3>10. How can I stay updated on new products and promotions?</h3>
+            <p>You can stay updated by subscribing to our newsletter. Enter your email address on our homepage to receive the latest updates, promotions, and exclusive offers directly in your inbox.</p>
+        </section> 
+        <button class="back-home-button" onclick="window.location.href='index.html'">← Back To Home Page</button>       
+    </main>
+    <footer>
+        <div class="footer-subscribe">
+            <form id="subscribe-form" onsubmit="emailReceivedMessage(event)">
+                <p>SUBSCRIBE TO GET THE LATEST UPDATES</p>
+                <div class="input-container">
+                    <img src="../Assets/mail-icon.png" class="mail-icon" alt="mail icon">
+                    <input type="email" id="email-input" placeholder="Enter your email">
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="about-us.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us On</h3>
+                <a href="https://www.facebook.com"><img src="../Assets/facebook-icon.png" alt="Facebook"> Facebook</a>
+                <a href="https://www.instagram.com"><img src="../Assets/instagram-icon.png" alt="Instagram"> Instagram</a>
+                <a href="https://www.youtube.com"><img src="../Assets/youtube-icon.png" alt="YouTube"> YouTube</a>
+            </div>
+            <div class="footer-column">
+                <h3>Payment Methods</h3>
+              <img src="../Assets/visa-icon.png" alt="Visa">
+              <img src="../Assets/mastercard-icon.png" alt="MasterCard">
+              <img id="unionpay-icon-size" img src="../Assets/unionpay-icon.png" alt="UnionPay">
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2024 CupCraze Ramen. All rights reserved.</p>
+        </div>
+    </footer>
+  </html>
+</body>
+</html>

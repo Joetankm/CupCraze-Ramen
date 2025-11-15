@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon">
+    <title>Login - CupCraze</title>
+    <link rel="stylesheet" href="../css/loginStyle.css">
+    <script src="../javascript/loginScript.js" defer></script>
+    <script src="../javascript/footerScript.js" defer></script>
+</head>
+<body>
+<header>
+    <img src="../Assets/logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+</header>
+<main>
+    <div class="form-container">
+        <form id="loginForm">
+            <h2>Login to your account</h2>
+            <hr> 
+            <div class="form-group">
+                <label for="username">Username *</label>
+                <input type="text" id="username" placeholder="Enter your username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <img src="../Assets/eye-icon.png" alt="Show Password" class="show-password" onmousedown="togglePasswordVisibility(true)" onmouseup="togglePasswordVisibility(false)" onmouseleave="togglePasswordVisibility(false)"> 
+            </div>
+            <div class="form-row">
+                <div class="form-group remember-me-group">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <a href="forgotPassword.html" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-button">LOGIN</button>
+        </form>
+        <p class="register-link">First time using cupcrazeramen.com.my? <a href="registration.html">Register here</a></p>
+    </div>
+    <button class="back-home-button" onclick="window.location.href='index.html'">← Back To Home Page</button>
+</main>
+<footer>
+    <div class="footer-subscribe">
+        <form id="subscribe-form" onsubmit="emailReceivedMessage(event)">
+            <p>SUBSCRIBE TO GET THE LATEST UPDATES</p>
+            <div class="input-container">
+                <img src="../Assets/mail-icon.png" class="mail-icon" alt="mail icon">
+                <input type="email" id="email-input" placeholder="Enter your email">
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="footer-links">
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="about-us.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us On</h3>
+            <a href="https://www.facebook.com"><img src="../Assets/facebook-icon.png" alt="Facebook"> Facebook</a>
+            <a href="https://www.instagram.com"><img src="../Assets/instagram-icon.png" alt="Instagram"> Instagram</a>
+            <a href="https://www.youtube.com"><img src="../Assets/youtube-icon.png" alt="YouTube"> YouTube</a>
+        </div>
+        <div class="footer-column">
+            <h3>Payment Methods</h3>
+            <img src="../Assets/visa-icon.png" alt="Visa">
+            <img src="../Assets/mastercard-icon.png" alt="MasterCard">
+            <img id="unionpay-icon-size" src="../Assets/unionpay-icon.png" alt="UnionPay">
+        </div>
+    </div>
+    <div class="footer-bottom-bar">
+        <p>&copy; 2024 CupCraze Ramen. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

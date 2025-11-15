@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/homeStyle.css">
+        <link rel="stylesheet" href="../css/cartStyle.css">
+        <link rel="stylesheet" href="../css/headerfooterStyle.css">
+        <link rel="icon" href="../Assets/logo.png" type="image/x-icon" >
+        <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon">
+        <meta charset="utf-8">
+        <title>Home - CupCraze</title>
+    </head>
+    <body>
+      <div class="promo-n-header">
+        <div class="promo-bar">
+          <p>20% DISCOUNT FOR NEW REGISTERED ACCOUNT ON THEIR FIRST ORDER !!</p>
+        </div>
+        <div class="header">
+          <header>
+            <div style="flex-grow: 0.5;"></div>
+            <div class="logo" onclick="window.location.href='home.html'">
+                <img src="../Assets/logo.png" alt="Logo">
+            </div>
+            <div style="flex-grow: 1;"></div> <!-- Add this line to create space between the logo and the search bar -->
+            <div class="search-bar">
+                <img src="../Assets/search icon.webp" class="search-icon" alt="search icon">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div style="flex-grow: 1;"></div> <!-- Add this line to create space between the logo and the search bar -->
+            <div class="contactus">
+              <p class="contact-text" alt="contact us icon" onclick="window.location.href='contact.html'">CONTACT US</p>
+            </div>
+            <div class="user-menu">
+                <img src="../Assets/user-icon.png" class="user-icon" alt="user icon">
+                <div class="user-dropdown">
+                    <a href="registration.html">Register an account</a>
+                    <a href="login.html">Login</a>
+                    <a href="#" onclick="logout()">Log out</a>
+                </div>
+            </div>
+              <div class="icon-cart">
+                <img src="../Assets/icon-cart.png" class="cart-icon-png" alt="icon cart icon">
+                <span>0</span>
+              </div>
+          </header>
+        </div>
+        </div>
+        <div class="cartTab">
+          <h1>Your Cart</h1>
+          <div class="listCart">
+              <div class="item">
+                <ul id="cart-items"></ul>
+                <span id="total-quantity"></span>
+                <p class="total">Subtotal RM<span id="total">0.00</span></p>
+                <p class="total-text">Shipping, taxes, and discounts will be calculated at checkout.</p>
+              </div>
+          </div>
+          <div class="btn">
+              <button class="cls">
+                <img src="../Assets/xclose.png" alt="close button" class="closex-icon">
+              </button>
+              <button id="checkout" class="checkout">
+                CHECKOUT
+              </button>
+          </div>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="overlay-text">Top Sellers</div>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 8</div>
+          <img src="../Assets/buldak 2x spicy.png" alt="Buldak 2x spicy" style="width: 100%;">
+          <div class="text">Samyang Ramen Extreme Hot Chicken</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 8</div>
+          <img src="../Assets/buldak hot chicken.png" style="width:100%">
+          <div class="text">Samyang Ramen Hot Chicken</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 8</div>
+          <img src="../Assets/shin ramen super spicy.png" alt="Shin Red Super Spicy" style="width: 100%;">
+          <div class="text">Shin Red Super Spicy</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 8</div>
+            <img src="../Assets/ottogi mild.png" alt="ottogi mild" style="width:100%">
+            <div class="text">Ottogi Jin Ramen Cup - Mild</div>
+          </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 8</div>
+            <img src="../Assets/Daebak ghost pepper.png" alt="Daebak Ghost Pepper" style="width:100%">
+            <div class="text">Daebak Ghost Pepper Cheese</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 8</div>
+          <img src="../Assets/ultra pop chicken thai.png" alt="Ultrapop Chicken Thai" style="width: 100%;">
+          <div class="text">Ultrapop Negi San Chicken Thai</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 8</div>
+          <img src="../Assets/sapporo beef.webp" alt="Sapporo Ichicban Beef" style="width: 100%;">
+          <div class="text">Sapporo Ichiban Beef Cup</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">8 / 8</div>
+          <img src="../Assets/Daebak spicy chicken.png" style="width:100%">
+          <div class="text">Daebak Habanero Spicy Chicken</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+
+    <div class="featureIcons">
+      <div class="featureItems">
+        <img src="../Assets/free shipping.png" alt="free shipping icon" class="featureIcon">
+        <h2 class="featureTitle">FREE SHIPPING</h2>
+        <p class="featureDescription">Free worldwide shipping<br>on all orders above RM30.</p>
+      </div>
+      <div class="featureItems">
+        <img src="../Assets/refund.png" alt="free shipping icon" class="featureIcon">
+        <h2 class="featureTitle">30 DAYS RETURN</h2>
+        <p class="featureDescription">No question return and<br>easy refund in 14 days</p>
+      </div>
+      <div class="featureItems">
+        <img src="../Assets/coupon.png" alt="free shipping icon" class="featureIcon">
+        <h2 class="featureTitle">GIFT CARD</h2>
+        <p class="featureDescription">Buy gift cards and<br>use coupon codes easily.</p>
+      </div>
+      <div class="featureItems">
+        <img src="../Assets/contact.png" alt="free shipping icon" class="featureIcon">
+        <h2 class="featureTitle">CONTACT US!</h2>
+        <p class="featureDescription">Keep in touch via<br>email and support system.</p>
+      </div>
+    </div>
+
+    <div class="newBannerContainer">
+      <img src="../Assets/shin banner.png" alt="shin ramen banner" class="newBanner">
+      <div class="newProduct">
+        <h2>Brand New!</h2>
+        <h3>Shin Ramen Products</h3>
+      </div>
+    </div>
+        <div class="bannerContainer">
+          <div class="bannerItem">
+            <img src="../Assets/banner1.jpg" alt="Banner 1" class="banner">
+            <h1 class="bannerDescription">Crafted with Care</h1>
+          </div>
+          <div class="bannerItem">
+            <h1 class="bannerDescription">Noodle Bliss</h1>
+            <img src="../Assets/banner2.jpg" alt="Banner 2" class="banner">
+          </div>
+          <div class="bannerItem">
+            <img src="../Assets/banner3.jpg" alt="Banner 3" class="banner">
+            <h1 class="bannerDescription">Street Food Delight</h1>
+          </div>
+        </div>
+
+        <div class="buttonContainer">
+         <button type="button" onclick="buttonActive()" id="showAll">Show All Products</button>
+         <img src="../Assets/down.webp" alt="down icon" id="downIcon">
+         <img src="../Assets/up.webp" alt="up icon" id="upIcon">
+        </div>
+
+        <ul id="hiddenItems">
+          <div class="filterButtons">
+            <button type="button" onclick="allFilter()" id="allFilter" class="toggled filterButton">All Products</button>
+            <button type="button" onclick="filter('nissin')" id="nissinFilter" class="filterButton">Nissin</button>
+            <button type="button" onclick="filter('samyang')" id="samyangFilter" class="filterButton">Samyang</button>
+            <button type="button" onclick="filter('maggi')" id="maggiFilter" class="filterButton">Maggi</button>
+            <button type="button" onclick="filter('ottogi')" id="ottogiFilter" class="filterButton">Ottogi</button>
+            <button type="button" onclick="filter('sapporo')" id="sapporoFilter" class="filterButton">Sapporo</button>
+            <button type="button" onclick="filter('shin')" id="shinFilter" class="filterButton">Shin</button>
+            <button type="button" onclick="filter('ultrapop')" id="ultrapopFilter" class="filterButton">Ultrapop</button>
+            <button type="button" onclick="filter('daebak')" id="daebakFilter" class="filterButton">Daebak</button>
+          </div>
+          <li class="listItem nissin">
+            <img src="../Assets/nissin soup original.webp" alt="Nissin Soup Original" class="list-img">Cup Noodle Original<br>RM 3.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Soup Original" data-price="3.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Taste the authentic flavors of Japan with Nissin® Cup Noodle. The #1 instant noodles in Japan, Cup Noodle ORIGINAL launched the concept of ramen in a cup. It’s an umami-packed pepper pork and soy sauce soup that’s topped with large shrimp, pork crumbles, scrambled egg and green onion—with no added MSG or artificial flavors. 
+                </p>
+            </div>
+          </li>
+          <li class="listItem nissin"><img src="../Assets/nissin soup seafood.webp" alt="Nissin Soup Seafood" class="list-img">Cup Noodle Seafood<br>RM 3.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Soup Seafood" data-price="3.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Taste the authentic flavors of Japan with Nissin® Cup Noodle Seafood. From the creators of instant ramen, enjoy the #1 seafood instant noodles in Japan. It’s an authentic, creamy seafood soup topped with calamari, imitation crab, scrambled eggs, and cabbage – with no added MSG or artificial flavors. 
+                </p>
+            </div>
+          </li>
+          <li class="listItem nissin"><img src="../Assets/nissin soup curry.webp" alt="Nissin Soup Curry" class="list-img">Cup Noodle Curry<br>RM 3.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Soup Curry" data-price="3.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Taste the authentic flavors of Japan with Nissin® Cup Noodle Curry. From the creators of instant ramen, enjoy the #1 curry instant noodles in Japan. It’s a savory, Japanese curry topped with pork sausage, diced carrots, and hearty potato chunks – with no added MSG or artificial flavors. Now available in Malaysia!
+                </p>
+            </div>
+          </li>
+          <li class="listItem nissin"><img src="../Assets/nissin dry korean bbq.webp" alt="Nissin Dry Korean BBQ" class="list-img">Cup Noodles Stir Fry Korean BBQ<br>RM 4
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Dry Korean BBQ" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  It’s not soup, it’s Stir Fry! Microwaveable, takeout-style Asian meals ready in minutes. Cup Noodles® Stir Fry™ Teriyaki Beef is stir fry style noodles and high-quality vegetables like green beans and cabbage, tossed in delicious, authentic flavored sauce, all with no added MSG or artificial flavors. Now you can take your favorite Asian dishes on the go in the cup you adore—from the noodle experts you know and love.
+                </p>
+            </div>
+          </li>
+          <li class="listItem nissin"><img src="../Assets/nissin dry sweet chili.webp" alt="Nissin Dry Sweet Chili" class="list-img">Cup Noodles Stir Fry Sweet Chili<br>RM 4
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Dry Sweet Chili" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  It’s not soup, it’s Stir Fry! Microwaveable, takeout-style Asian meals ready in minutes. Cup Noodles® Stir Fry™ Sweet Chili is vegetarian with stir fry style noodles and high-quality vegetables like green beans and cabbage, tossed in delicious, authentic flavored sauce, all with no added MSG or artificial flavors. Now you can take your favorite Asian dishes on the go in the cup you adore. Perfect option for vegetarians!
+                </p>
+            </div>
+          </li>
+          <li class="listItem nissin"><img src="../Assets/nissin dry teriyaki beef.webp" alt="Nissin Dry Teriyaki Beef" class="list-img">Cup Noodles Stir Fry Teriyaki Beef<br>RM 4
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Nissin Dry Teriyaki Beef" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  It’s not soup, it’s Stir Fry! Microwaveable, takeout-style Asian meals ready in minutes. Cup Noodles® Stir Fry™ Teriyaki Beef is stir fry style noodles and high-quality vegetables like green beans and cabbage, tossed in delicious, authentic flavored sauce, all with no added MSG or artificial flavors. Now you can take your favorite Asian dishes on the go in the cup you adore—from the noodle experts you know and love.
+                </p>
+            </div>
+          </li>
+          <li class="listItem samyang"><img src="../Assets/buldak hot chicken.png" alt="Buldak Hot Chicken" class="list-img">Samyang Ramen Hot Chicken<br>RM 5
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Buldak Hot Chicken" data-price="5.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Experience the delightful flavor of Samyang's Buldak Ramen Hot Chicken Original Cup, a real delight for spice enthusiasts! Innovative, popular, and spicy. Savor the heat! These delicious instant noodles are ready to serve within minutes. So what are you waiting for? Buy now exclusively at our shop!
+                </p>
+            </div>
+          </li>
+          <li class="listItem samyang"><img src="../Assets/buldak hot chicken carbo.png" alt="Buldak hot chicken carbo" class="list-img">Samyang Ramen Hot Chicken Carbo<br>RM 5.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Buldak hot chicken carbo" data-price="5.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Discover the delicious taste of Samyang's Buldak Ramen Hot Chicken Carbo Cup, a true treat for lovers of spicy Asian cuisine! Who says Korean and Italian food don't mix well? The innovative combination of pasta carbonara flavor and Samyang's popular hot chicken ramen proves they do! 
+                </p>
+            </div>
+          </li>
+          <li class="listItem samyang"><img src="../Assets/buldak 2x spicy.png" alt="Buldak 2x spicy" class="list-img">Samyang Ramen Extreme Hot Chicken<br>RM 5.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Buldak 2x spicy" data-price="5.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Experience the delightful flavor of Samyang's Buldak Ramen Extreme Hot Chicken 2x Spicy Cup, a real delight for spice enthusiasts! This Korean product has an SHU of as high as 8,808. Innovative, popular, and TWICE as spicy. Savor the heat! These delicious instant noodles are ready to serve within minutes.
+                </p>
+            </div>
+          </li>
+          <li class="listItem maggi"><img src="../Assets/maggi soup chicken.webp" alt="Maggi Soup Chicken" class="list-img">MAGGI® Hot Cup® Chicken<br>RM 2.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Maggi Soup Chicken" data-price="2.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Savour the taste of real chicken for a truly satisfying and hearty meal, anywhere and anytime. Hot and satisfying chicken noodle soup, on-the-go! Made from a blend of aromatic herbs and spices, for that taste and aroma of real chicken - mmm satisfied with every slurp!
+                </p>
+            </div>
+          </li>
+          <li class="listItem maggi"><img src="../Assets/maggi soup asam laksa.webp" alt="Maggi Asam Laksa" class="list-img">MAGGI® Hot Cup® Asam Laksa<br>RM 2.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Maggi Asam Laksa" data-price="2.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Slurp up a whirlwind of flavours for that satisfying asam laksa kick- served up in a cup! Savour the gratifying fish flavour and rich sour broth. Made with unique blend of spices - including turmeric - and real chillies for that asam laksa kick and tangy fish taste. Pergh! Slurp up!
+                </p>
+            </div>
+          </li> <!--HERE-->
+          <li class="listItem maggi"><img src="../Assets/maggi soup curry.webp" alt="Maggi Curry" class="list-img">MAGGI® HOT CUP® Curry<br>RM 2.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Maggi Curry" data-price="2.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Enjoy that signature curry taste loved by all Malaysians, on-the-go! Your favourite curry noodles, made to perfection. Slow cooked till the oil separates, enjoy every drop of aromatic curry broth and every inch of extra springy noodles made from fine Australian wheat.
+                </p>
+            </div>
+          </li>
+          <li class="listItem maggi"><img src="../Assets/maggi soup tom yam.webp" alt="Maggi Tom Yam" class="list-img">MAGGI® Hot Cup® Tom Yam<br>RM 2.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Maggi Tom Yam" data-price="2.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Delicious hot & sour noodle soup with MAGGI Hot Cup TomYam. Savour the aroma and taste of real herbs & spices for that awesome TomYam sensation with every slurp. Combination of kaffir lime leaves and lemongrass. For that aromatic fragrance of a hot & sour tomyam soup with every bite.
+                </p>
+            </div>
+          </li>
+          <li class="listItem ottogi"><img src="../Assets/ottogi mild.png" alt="Ottogi Mild" class="list-img">Ottogi Jin Ramen Cup - Mild<br>RM 4.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Ottogi Mild" data-price="4.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Enjoy the delightful taste of mild Korean ramen with this convenient cup format. Perfect for those moments when you need a quick and satisfying meal, this ramen offers a flavorful broth and tender noodles, all ready in minutes. It's an excellent choice for busy days or a comforting snack anytime.
+                </p>
+            </div>
+          </li>
+          <li class="listItem ottogi"><img src="../Assets/ottogi spicy.png" alt="Ottogi Spicy" class="list-img">Ottogi Jin Ramen Cup - Spicy<br>RM 4.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Ottogi Spicy" data-price="4.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Enjoy the delightful taste of spicy Korean ramen with this convenient cup format. Perfect for those moments when you need a quick and satisfying meal, this ramen offers a flavorful broth and tender noodles, all ready in minutes. It's an excellent choice for busy days or a comforting snack anytime.
+                </p>
+            </div>
+          </li>
+          <li class="listItem sapporo"><img src="../Assets/sapporo original.webp" alt="Sapporo Ichicban Original" class="list-img">Sapporo Ichiban Original Cup<br>RM 3.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Sapporo Ichicban Original" data-price="3.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  The Sapporo Ichiban Original soup is a combination of soy sauce and chicken broth that is infused with the aroma of sweet vegetables, garlic and a hint of ginger. Corn, carrots, and green onions are added as toppings to further enrich the flavorful dish.
+                </p>
+            </div>
+          </li>
+          <li class="listItem sapporo"><img src="../Assets/sapporo chicken.webp" alt="Sapporo Ichicban Chicken" class="list-img">Sapporo Ichiban Chicken Cup<br>RM 3.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Sapporo Ichicban Chicken" data-price="3.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Our light yet flavorful chicken soup is created by blending chicken stock with our handcrafted spice mix. The tasty noodles create a perfect balance along with corn, carrots and green peas garnished as toppings.
+                </p>
+            </div>
+          </li>
+          <li class="listItem sapporo"><img src="../Assets/sapporo beef.webp" alt="Sapporo Ichicban Beef" class="list-img">Sapporo Ichiban Beef Cup<br>RM 3.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Sapporo Ichicban Beef" data-price="3.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Beef stock and shoyu is blended along with vegetables and a mixture of spices including pepper to bring out the rich and flavorful beef taste with a delightful aftertaste. The dish is garnished with corn, carrots and green peas.
+                </p>
+            </div>
+          </li>
+          <li class="listItem sapporo"><img src="../Assets/sapporo shrimp.webp" alt="Sapporo Ichicban shrimp" class="list-img">Sapporo Ichiban Shrimp Cup<br>RM 3.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Sapporo Ichicban shrimp" data-price="3.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Chicken and shrimp stock is blended in a perfect balance along with vegetables to add a natural mild sweetness. The dish is garnished with carrots, corn, and freeze-dried shrimp to further enhance the shrimp flavor.
+                </p>
+            </div>
+          </li>
+          <li class="listItem shin"><img src="../Assets/shin ramen soup.png" alt="Shin Ramen Soup" class="list-img">Shin Cup Noodle Soup<br>RM 4.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Shin Ramen Soup" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  The soft and chewy noodle combined with the spicy beef broth creates the perfect recipe that will please any palate. You might be surprised by the level of spiciness at first, but the delicious mélange of flavors will soon have you crave for more.
+                </p>
+            </div>
+          </li>
+          <li class="listItem shin"><img src="../Assets/shin ramen super spicy.png" alt="Shin Red Super Spicy" class="list-img">Shin Red Super Spicy<br>RM 4.50
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Shin Red Super Spicy" data-price="4.50" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Shin Ramen Red Super Spicy is twice as spicy as original “Shin Ramen” and has a richer flavor. The flavor and deepness of the ingredients such as original spices and vegetables are in harmony with the exciting spiciness, making it an addictive taste.
+                </p>
+            </div>
+          </li>
+          <li class="listItem ultrapop"><img src="../Assets/ultra pop chicken thai.png" alt="Ultrapop Chicken Thai" class="list-img">Ultrapop Negi San Chicken Thai<br>RM 4.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Ultrapop Chicken Thai" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Elevate your culinary offerings with Ultra Pop's Chicken Thai Flavored Instant Noodles, part of the Negi San One Piece series. Crafted for businesses seeking quality and convenience, these 65g instant noodles offer a delightful fusion of savory chicken and aromatic Thai spices.
+                </p>
+            </div>
+            </li>
+          <li class="listItem ultrapop"><img src="../Assets/ultra pop vegetable.png" alt="Ultrapop Vegetable" class="list-img">Ultrapop Negi San Vegetable<br>RM 4.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Ultrapop Vegetable" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Diversify your culinary selection with Ultra Pop's Vegetable Flavored Instant Noodles from the Negi San One Piece series. Tailored for businesses prioritizing quality and convenience, these 65g instant noodles present a delectable combination of assorted vegetables.
+                </p>
+            </div>
+          </li>
+          <li class="listItem ultrapop"><img src="../Assets/ultra pop beef.png" alt="Ultrapop Beef" class="list-img">Ultrapop Negi San Beef<br>RM 4.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Ultrapop Beef" data-price="4.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  Enrich your culinary offerings with Ultra Pop's Beef Flavored Instant Noodles, a part of the Negi San One Piece series. Tailored for businesses emphasizing quality and convenience, these 65g instant noodles offer a savory blend of rich beef flavors. Now available in Malaysia!
+                </p>
+                </p>
+            </div>
+          </li>
+          <li class="listItem daebak"><img src="../Assets/Daebak spicy chicken.png" alt="Daebak Spicy Chicken" class="list-img">Daebak Habanero Spicy Chicken<br>RM 5.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Daebak Spicy Chicken" data-price="5.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  The Daebak Spicy Chicken Habanero Ramen Cup is a spicy treat. The fiery aroma of the noodles is a prelude to the intense flavor of habanero and spicy chicken. Now available in Malaysia!
+                </p>
+            </div>
+          </li>
+          <li class="listItem daebak"><img src="../Assets/Daebak kimchi jjigae.png" alt="Daebak Kinchi Jjigae" class="list-img">Daebak Habanero Kimchi Jjigae<br>RM 5.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Daebak Kinchi Jjigae" data-price="5.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  The Daebak Habanero Kimchi Jjigae Ramen Cup promises a spicy flavor explosion. These instant noodles, enriched with habanero and kimchi, deliver an unparalleled spiciness. Now available in Malaysia!
+                </p>
+                </p>
+            </div>
+          </li>
+          <li class="listItem daebak"><img src="../Assets/Daebak ghost pepper.png" alt="Daebak Ghost Pepper" class="list-img">Daebak Ghost Pepper Cheese<br>RM 5.00
+            <div class="icon-overlay">
+              <img src="../Assets/heart icon.png" alt="Heart icon" class="icon like-button">
+              <img src="../Assets/shopping cart.webp" alt="Add to cart" data-product="Daebak Ghost Pepper" data-price="5.00" class="icon cart-button">
+              <img src="../Assets/info icon.png" alt="Info" class="icon info-button">
+              <div class="productInfo">
+                <p>
+                  The Daebak Ghost Pepper Black Ramen Cup with Spicy Chicken Cheese is a fiery explosion of flavors. The deep black hue of the instant noodles unveils the intense heat of the legendary Ghost Pepper, complemented by the zest of spicy chicken.
+                </p>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <div id="buttonContainerBottom">
+          <button type="button" onclick="buttonActive()" id="showAllBottom" class="toggled">Show All Products</button>
+          <img src="../Assets/up.webp" alt="up icon" id="upIconBottom">
+         </div>
+        <script src="../javascript/homeScript.js"></script>
+        <script src="../javascript/cartScript.js"></script>
+        <script src="../javascript/footerScript.js"></script>
+    </body>
+    <br>
+    <footer>
+      <div class="footer-subscribe">
+          <form id="subscribe-form" onsubmit="emailReceivedMessage(event)">
+              <p>SUBSCRIBE TO GET THE LATEST UPDATES</p>
+              <div class="input-container">
+                  <img src="../Assets/mail-icon.png" class="mail-icon" alt="mail icon">
+                  <input type="email" id="email-input" placeholder="Enter your email">
+              </div>
+              <button type="submit">SUBMIT</button>
+          </form>
+      </div>
+      <div class="footer-links">
+          <div class="footer-column">
+              <h3>Company</h3>
+              <a href="about-us.html">About Us</a>
+              <a href="contact.html">Contact Us</a>
+              <a href="terms.html">Terms & Conditions</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="faq.html">FAQ</a>
+          </div>
+          <div class="footer-column">
+              <h3>Follow Us On</h3>
+              <a href="https://www.facebook.com"><img src="../Assets/facebook-icon.png" alt="Facebook"> Facebook</a>
+              <a href="https://www.instagram.com"><img src="../Assets/instagram-icon.png" alt="Instagram"> Instagram</a>
+              <a href="https://www.youtube.com"><img src="../Assets/youtube-icon.png" alt="YouTube"> YouTube</a>
+          </div>
+          <div class="footer-column">
+              <h3>Payment Methods</h3>
+              <img src="../Assets/visa-icon.png" alt="Visa">
+              <img src="../Assets/mastercard-icon.png" alt="MasterCard">
+              <img id="unionpay-icon-size" img src="../Assets/unionpay-icon.png" alt="UnionPay">
+          </div>
+      </div>
+      <div class="footer-bottom-bar">
+          <p>&copy; 2024 CupCraze Ramen. All rights reserved.</p>
+      </div>
+  </footer>
+</html>
